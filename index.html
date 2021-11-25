@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Viseo Investimentos</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="./images/logo-red.png" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,700,800%7COswald:300,400,500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/customer.css">
+    <script src="https://kit.fontawesome.com/65679e954d.js" crossorigin="anonymous"></script>
+
+    <!-- Scripts do whats button -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script> <!-- remova se você já tiver o jquery sendo carregado em sua página -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <script type='text/javascript'>
+      /*
+      whatsapp- botão flutuante 
+      */
+      $(document).ready(function () {
+      var cookieMessagePrimary = $.cookie("wc_whatsapp_primary");
+      if (cookieMessagePrimary !== '1') {
+      $.cookie("wc_whatsapp_primary", 1, {expires: 30}); //Mensagem Principal volta exibir após de 30 dias
+      setTimeout(showMessagePrimary, 4000);
+      } else {
+      //se tiver no mobile, a mensagem primária não exibe
+      if (screen.width > 550) {
+      setTimeout(showMessageSecondary, 4000);
+      }
+      }
+      //esconde mensagem secundária ao clicar
+      $('.wc_whatsapp_secondary').click(function () {
+      $(this).fadeOut(400);
+      });
+      //esconde mensagem primária ao clicar
+      $('.wc_whatsapp_primary').click(function () {
+      $(this).fadeOut(400);
+      });
+      //controla botão de fechar da mensagem primária
+      $('.wc_whatsapp_primary .close').click(function () {
+      $('.wc_whatsapp_primary').fadeOut(400);
+      return false;
+      });
+      //esconde mensagem secundária ao passar o mouse no botão
+      $('.wc_whatsapp').hover(function () {
+      $('.wc_whatsapp_secondary').fadeOut(400);
+      });
+      
+      //função para exibir mensagem secundária
+      function showMessageSecondary() {
+      $('.wc_whatsapp_secondary').fadeIn(400);
+      }
+      
+      //função para exibir mensagem primária
+      function showMessagePrimary() {
+      $('.wc_whatsapp_primary').fadeIn(400).css("display", "flex");
+      }
+      });
+      </script>
+
+  </head>
+  <body>
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header" data-type="anchor">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-minimal" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-fixed" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="./images/logo_160x60.png" alt=""></a>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap" id="rd-navbar-nav-wrap-1">
+                    <!-- Header-->
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="#home">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#precatorios">Precatórios</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#contato">Contato</a>
+                        </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#sobre">Sobre Nós</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="#noticias">Notícias</a>
+                    </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" target="_blank" href= "https://www.infojobs.com.br/emprego-viseo-investimentos__519179.aspx">Trabalhe Conosco</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <div class="wc_whatsapp_app right">
+        <a href="https://wa.me/5511976582324" target="_blank" class="wc_whatsapp" >
+        <span class="wc_whatsapp_primary">
+        <span class="close">x</span>
+        <img src="https://viseoinvestimentos.com.br/v2/images/logo203X64.png"/>
+        <p>Ola, somos a Viseo Investimentos!</p>
+        </span>
+        </a>
+        <a href="https://wa.me/5511976582324" target="_blank" class="wc_whatsapp_secondary" >
+        <p>Em que posso ajudar?</p>
+        </a>
+        </div>
+
+
+      <div class="swiper-container swiper-slider swiper-slider-minimal" id="home" data-loop="true" data-slide-effect="fade" data-autoplay="7000" data-simulate-touch="true">
+        <!-- 10000 = 10 segundos -AQUI -> data-autoplay="10000" -->
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-slide-bg="images/pexels-banner.jpeg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="swiper-slide-text">
+                  <img class="img-banner" src="./images/FAV-White.png" alt=""/>
+                  <div class="font-weight-ligth">
+                   <b class="font-weight-bold">Viseo Investimentos,</b> 
+                    onde você pode Negociar seu Precatório com <b class="font-weight-bold">Credibilidade </b> e <b class="font-weight-bold"> Confiança.</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/pexels-photo-3861962.jpeg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="swiper-slide-text">
+                  <img class="img-banner" src="./images/FAV-White.png" alt=""/>
+                  <div class="font-weight-ligth">
+                    Negociamos e <b class="font-weight-bold">antecipamos</b> seu precatório de maneira
+                    <b class="font-weight-bold">rápida</b> e <b class="font-weight-bold">Segura.</b>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-slide-bg="images/aperto-mao.jpeg">
+            <div class="swiper-slide-caption">
+              <div class="container">
+                <div class="swiper-slide-text">
+                  <img class="img-banner" src="./images/FAV-White.png" alt=""/>
+                  <div class="font-weight-ligth">
+                    Na <b class="font-weight-bold">Viseo Investimentos,</b><br />
+                    Você recebe o valor acordado
+                    <br />
+                    <b class="font-weight-bold">à vista </b>no 
+                  <b class="font-weight-bold">ato da cessão. </b></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination-outer container">
+          <div class="swiper-pagination swiper-pagination-modern swiper-pagination-marked" data-index-bullet="true"></div>
+        </div>
+      </div>
+      <!-- O Que é um Precatório?-->
+      <section class="section section-lg text-center" id="precatorios" data-type="anchor">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInUp">Precatório?</span></h3>
+          <p class="wow-outer"><span class="text-width-1 wow slideInDown">Após obter o ganho de causa contra o Poder Público, o titular do direito resguardado com a ação judicial passa a ser detentor de um título, denominado de Precatório. Precatório, portanto, nada mais é que o reconhecimento judicial de uma dívida que o ente público tem com o autor da ação, seja ele pessoa física ou jurídica. 
+            Você, detentor do Precatório, pode optar em esperar na fila de Pagamento do ente Público, ou ceder esse direito à terceiros. A Cessão do Precatório é respaldada pela legislação e é uma atividade muito comum no mercado atual, onde, cada vez mais, a demora do ente público no pagamento do Precatório é mais frequente.
+          </span></p>
+          <div class="row row-50 row-xxl-70 offset-top-2">
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Passo a Passo 1-->
+              <article class="box-light wow slideInLeft">
+                <span style="font-size: 15px"><i class="fa fa-flag fa-2x"></i></span>
+                <h4 class="box-light-title">Passo 1</h4>
+                <p>Receba uma proposta comercial pelo seu precatório.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Passo a Passo 2-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".05s">
+                <span style="font-size: 15px"><i class="fa fa-file-import fa-2x"></i></span>
+                <h4 class="box-light-title">Passo 2</h4>
+                <p>Envio de documentação para início de Auditoria Jurídica.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Passo a Passo 3-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".1s">
+                <span style="font-size: 15px"><i class="fa fa-check fa-2x"></i></span>
+                <h4 class="box-light-title">Passo 3</h4>
+                <p>Validação e agendamento da cessão em cartório próximo do cliente.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+              <!-- Passo a Passo 4-->
+              <article class="box-light wow slideInLeft" data-wow-delay=".15s">
+                <span style="font-size: 15px"><i class="fa fa-money-bill-alt fa-2x"></i></span>
+                <h4 class="box-light-title">Passo 4</h4>
+                <p>Pagamento pela compra no ato da cessão.</p>
+              </article>
+            </div>
+      </section>
+    
+      <section class="section section-lg bg-gray-100" id="about-us" data-type="anchor">
+        <div class="container">
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-6 wow-outer"><img class="img-responsive wow slideInRight" src="./images/veia3.jpeg" alt="" width="570" height="368"/>
+            </div>
+            <div class="col-md-10 col-lg-6 col-xl-5">
+              <h3 class="wow-outer"><span class="wow slideInDown">Vender meu precatório, é uma boa opção?</span></h3>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">Sempre é melhor receber um valor justo À VISTA do que esperar por anos 
+                e não receber a tempo de desfrutar dos privilégios que esse dinheiro pode lhe proporcionar.
+                Antecipando seu Precatório você pode investir e fazê-lo render mais do que iria receber do Governo, e se você tiver dívidas,
+                pode pagá-las de uma única vez, recebendo descontos e até a isenção de juros.
+                Estamos vivendo um momento de incertezas tanto políticas, quanto econômicas, então nada melhor do que o seu dinheiro estar nas suas mãos.</span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulário Precatório -->
+      <section class="section" id="contato" data-type="anchor">
+        <div class="range justify-content-xl-between">
+          <div class="cell-xl-6 align-self-center container">
+            <div class="row">
+              <div class="col-lg-9 cell-inner">
+                <div class="section-lg">
+                  <h3 class="wow-outer"><span class="wow slideInDown">Antecipe seu Precatório de forma Rápida e Segura!</span></h3>
+                  <br />
+                    <h4><span>Faça uma consulta sem compromisso:</span></h4>
+                  <!-- Formulário Precatório -->
+                  <form class="rd-form rd-mailform"
+                    data-form-output="form-output-global"
+                    data-form-type="contact"
+                    method="post"
+                    action="./mailConsulta.php">
+                    <div class="row row-10">
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp">
+                          <label class="form-label-outside" for="formulario-consulta-campo-nome">Nome Completo</label>
+                          <input class="form-input" id="formulario-consulta-campo-nome" type="text" name="formulario-consulta-campo-nome" data-constraints="@Required">
+                        </div>
+                      </div>
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp">
+                          <label class="form-label-outside" for="formulario-consulta-campo-email">Email</label>
+                          <input class="form-input" id="formulario-consulta-campo-email" type="text" name="formulario-consulta-campo-email" data-constraints="@Required">
+                        </div>
+                      </div>
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp">
+                          <label class="form-label-outside" for="formulario-consulta-campo-cpf">CPF</label>
+                          <input class="form-input" id="formulario-consulta-campo-cpf" type="cpf" name="formulario-consulta-campo-cpf" data-constraints="@CPF @Required">
+                        </div>
+                      </div>
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp">
+                          <label class="form-label-outside" for="formulario-consulta-campo-tel">Telefone</label>
+                          <input class="form-input" id="formulario-consulta-campo-tel" type="tel" name="formulario-consulta-campo-tel" data-constraints="@tel @Required">
+                        </div>
+                      </div>
+                      <div class="col-md-6 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp">
+                          <label class="form-label-outside" for="formulario-consulta-campo-tipo">Tipo de Precatório</label>
+                          <select class="form-input" id="formulario-consulta-campo-tipo" type="select" name="formulario-consulta-campo-tipo" data-constraints="@Precatorio @Required">
+                            <option>(Selecione)</option>
+                            <option>Federal</option>
+                            <option>Estadual(SP)</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-12 wow-outer">
+                        <div class="form-wrap wow fadeSlideInUp">
+                          <label class="form-label-outside" for="formulario-consulta-campo-mensagem">Sua Mensagem</label>
+                          <textarea class="form-input" id="formulario-consulta-campo-mensagem" name="formulario-consulta-campo-mensagem" data-constraints="@Required"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="group form">
+                      <button class="button button-primary button-winona wow slideInRight" type="submit">Enviar Mensagem</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cell-xl-5 height-fill wow fadeIn text-form">
+            <!-- <div class=""> -->
+              A Viseo Investimentos está disponível para auxiliar em todas as suas dúvidas relacionadas ao seu Precatório. Conte com a nossa equipe especializada em ativos judiciais para solucionar as suas dúvidas. 
+              <br/>
+              <br/>
+              Preencha o formulário ao lado e um de nossos Consultores de Negócios entrará em contato.
+            </div>
+          <!-- </div> -->
+        </div>
+      </section>
+      <!--Conhecendo a Viseo-->
+      <section class="section section-lg bg-gray-100" id="sobre" data-type="anchor">
+        <div class="container">
+          <div class="row row-50 justify-content-center justify-content-lg-between">
+            <div class="col-md-10 col-lg-6 col-xl-5">
+              <h3 class="wow-outer"><span class="wow slideInDown">Conhecendo a Viseo Investimentos</span></h3>
+              <p class="wow-outer"><span class="wow slideInDown" data-wow-delay=".05s">A Viseo Investimentos foi fundada para
+                potencializar a originação de Ativos, dentre eles
+                Precatórios Federais, Estaduais SP e Municipais SP.
+                Nosso propósito é a confiabilidade e credibilidade.
+                Temos uma equipe dinâmica e multidisciplinar
+                  com experiência de mais de 15 anos, tanto na área
+                  de Tecnologia da Informação, quanto nas áreas de
+                  Gestão, Comercial e Jurídica. Nosso objetivo é
+                  ajudá-lo com orientações precisas sobre o seu
+                  precatório e oferecer uma oportunidade de
+                  negociação com transparência e segurança.
+                </span></p>
+                <br/>
+                <div id="spoiler" style="display:none">
+                Conta mos com a participação de INVESTIDORES
+                renomados em suas áreas de atuação, o que
+                demonstra toda a solidez e a confiança nas
+                operações que realizamos.</div>  
+                <br/>
+                <button class="botao-estilizado" title="Clique para mostrar/ocultar" type="button" onclick="
+                if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}
+                else{document.getElementById('spoiler') .style.display='none'}">Saiba Mais</button>
+              <!-- <div class="wow-outer button-outer"><a class="button button-lg button-primary button-winona wow slideInDown" data-wow-delay=".1s" href="#">Saiba Mais</a></div> -->
+            </div>
+            <div class="col-md-10 col-lg-6 wow-outer"><img class="img-responsive wow slideInRight" src="./images/pexels-canva-studio-3153201.jpg" alt="" width="570" height="368"/>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="section section-lg text-center" id="" data-type="anchor">
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInUp">Em que acreditamos?</span></h3>
+          <p class="wow-outer"><span class="text-width-1 wow slideInDown">Ética e Transparência sempre devem
+            prevalecer em nossos negócios;
+            Auditoria ágil, e focada em mitigar
+            riscos dos ativos;
+            Valorização dos nossos colaboradores
+            e regime de Meritocracia;
+            Buscar sempre superar a rentabilidade
+            esperada para nossos Investidores.
+            <br /> 
+            <br /> 
+          </span></p>
+          <h3 class="wow-outer"><span class="wow slideInUp">Análise Jurídica</span></h3>
+          <p class="wow-outer"><span class="text-width-1 wow slideInDown">Sempre temos a preocupação em seguir a legislação vigente. Você cliente, pode ter a certeza de que, uma vez que opte por negociar seu Precatório conosco, 
+            iremos realizar auditoria detalhada em seu Processo Judicial que originou seu Precatório e seguir todas as diretrizes jurídicas para a correta Cessão do Crédito.
+          </span></p>
+          <br /> 
+          <br /> 
+          <h3 class="wow-outer"><span class="wow slideInUp">Colaboradores</span></h3>
+          <p class="wow-outer"><span class="text-width-1 wow slideInDown">Formada por profissionais com nível de excelência em cada área de atuação, nossa equipe oferece segurança e credibilidade para quem busca uma empresa séria para negociar seu Precatório.
+          </span></p>
+
+          <div class="row row-50 row-xxl-70 offset-top-2">
+            <div class="col-sm-6 col-md-4 col-lg-3 wow-outer">
+      </section>
+
+ 
+      <!-- CTA Thin-->
+      <section class="section section-xs bg-primary-gradient text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-md-12">
+              <div class="box-cta-thin">
+                <h4 class="wow-outer"><span class="wow slideInRight">Entre em contato com a  <span class="font-weight-bold">Viseo Investimentos</span> agora mesmo!</span></h4><a class="button button-primary button-winona" href="#contato">Clique Aqui</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- Latest Blog Posts-->
+      <section class="section section-lg text-center" id="noticias" data-type="anchor">
+        <!-- <section class="section section-lg bg-gray-100" id="sobre" data-type="anchor"> -->
+
+        <div class="container">
+          <h3 class="wow-outer"><span class="wow slideInDown">Notícias</span></h3>
+          <div class="row row-50">
+            <div class="col-md-6 wow-outer">
+              <!-- noticia 1 -->
+              <article class="post-modern wow slideInLeft"><a class="post-modern-media" target="_blank" href="https://www.cnnbrasil.com.br/business/guedes-temos-que-escolher-entre-os-vulneraveis-ou-os-precatorios/"><img src="./images/guedes.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title">
+                  <a target="_blank" href="https://www.cnnbrasil.com.br/business/guedes-temos-que-escolher-entre-os-vulneraveis-ou-os-precatorios/">
+                    Guedes: Temos que escolher entre os vulneráveis ou os precatórios.
+                  </a>
+                </h4>
+                <ul class="post-modern-meta">
+                  <li>Por Canal Livre</li>
+                  <li>
+                    <time datetime="2021"> 01/10/2021 as 15:25</time>
+                  </li>
+                </ul>
+                <p>O ministro da Economia, Paulo Guedes, participou de cerimônia de assinatura do decreto da Cédula de Produto Rural (CPR) Verde, em Brasília, nesta sexta-feira (1º), ao lado do presidente Jair Bolsonaro (sem partido) e outros ministros.
+                  Em seu discurso, Guedes destacou a necessidade do Supremo Tribunal Federal (STF) definir o que classificou como “erro de origem” sobre os pagamentos de precatórios e a implementação do Auxílio Brasil, que substituirá o Bolsa Família, e atenderá aos vulneráveis. O assunto tem sido uma das principais pautas da Economia nos últimos meses.</p>
+              </article>
+            </div>
+            <div class="col-md-6 wow-outer">
+              <!-- noticia 2 -->
+              <article class="post-modern wow slideInLeft">
+                <a class="post-modern-media" target="_blank" href="https://agenciabrasil.ebc.com.br/politica/noticia/2021-09/ccj-da-camara-aprova-admissibilidade-da-pec-dos-precatorios"><img src="./images/prec_news.jpg" alt="" width="571" height="353"/></a>
+                <h4 class="post-modern-title">
+                  <a target="_blank" href="https://agenciabrasil.ebc.com.br/politica/noticia/2021-09/ccj-da-camara-aprova-admissibilidade-da-pec-dos-precatorios">
+                    CCJ da Câmara aprova admissibilidade da PEC dos Precatórios
+                  </a>
+                </h4>
+                <ul class="post-modern-meta">
+                  <li>Por Agência Brasil </li>
+                  <li>
+                    <time datetime="2019">16/09/2021 as 12:05</time>
+                  </li>
+                </ul>
+                <p>A Comissão de Constituição e Justiça e de Cidadania (CCJ) da Câmara dos Deputados aprovou a admissibilidade da Proposta de Emenda à Constituição (PEC) 23/2021, conhecida como PEC dos Precatórios. Na sessão desta quinta-feira (16) da comissão, os parlamentares aprovaram o texto de autoria do Poder Executivo que muda a forma de pagamento de precatórios por 32 votos favoráveis e 26 contrários.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.067006234197!2d-46.73345498502282!3d-23.53009228469839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8bc36b9b9bf%3A0x878ae31db19e6e99!2sAv.%20Imperatriz%20Leopoldina%2C%20957%20-%20Vila%20Leopoldina%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005305-011!5e0!3m2!1spt-BR!2sbr!4v1631763478421!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+     
+      <!-- Page Footer-->
+      <footer class="section footer-linked bg-gray-700">
+        <div class="footer-linked-main">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-8">
+                <h4>Links Rápidos</h4>
+                <hr class="offset-right-1">
+                <div class="row row-20">
+                  <div class="col-8 col-sm-4">
+                    <ul class="list list-xs">
+                      <li><a href="#precatorios">Precatório</a></li>
+                      <li><a href="#sobre">Sobre Nós</a></li>
+                      <li><a href="#contato">Contato</a></li>
+                      <li><a href="#noticias">Notícias</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-8 col-sm-4">
+                    <ul class="list list-xs">
+                      <!-- <li><a href="#">Facebook</a></li> -->
+                      <!-- <li><a target="_blank" href="https://www.instagram.com/viseoinvestimentos/">Instagram</a></li> -->
+                      <li><a target="_blank" href= "https://www.infojobs.com.br/emprego-viseo-investimentos__519179.aspx">Trabalhe Conosco</a></li>
+                      <li><a target="_blank" href="https://www.linkedin.com/company/viseo-investimentos/mycompany/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7 col-lg-4">
+                <h4>Contato Para Mais Informações</h4>
+                <hr>
+                <ul class="list-sm">
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-map-marker text-gray-700"></span><a class="link-default" target="_blank" href="https://www.google.com.br/maps/place/Av.+Imperatriz+Leopoldina+-+Vila+Leopoldina,+S%C3%A3o+Paulo+-+SP,+02675-031/@-23.5304538,-46.7335428,17z/data=!3m1!4b1!4m5!3m4!1s0x94cef8bc4887b971:0xf7a3521fbafe0043!8m2!3d-23.5304538!4d-46.7313541">Av. Imperatriz Leopoldina, 957 - 21º Andar<br>São Paulo - Brasil</a></li>
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-phone text-gray-700"></span>
+                    <ul class="list-0">
+                      <li><a class="link-default" href="tel:+551123918614">11 2391-8614</a></li>
+                    </ul>
+                  </li>
+                  <li class="object-inline"><span class="icon icon-md mdi mdi-email text-gray-700"></span><a class="link-default" href="mailto:contato@viseoinvestimentos.com.br">contato@viseoinvestimentos.com.br</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-linked-aside">
+          <div class="container">
+            <!-- Rights-->
+            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Todos os direitos reservados - Viseo Investimentos</span></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="preloader"> 
+      <div class="preloader-logo"><img src="./images/logo-viseo.png" alt=""></div>
+      <div class="preloader-body">
+        <div id="loadingProgressG">
+          <div class="loadingProgressG" id="loadingProgressG_1"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="./js/core.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- coded by ragnar-->
+  </body>
+</html>
